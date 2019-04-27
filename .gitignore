@@ -1,0 +1,6 @@
+*.idea
+*.gradle
+build/
+gradle/
+employee.mv.db
+rc/client/angular/node_modules

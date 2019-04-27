@@ -1,0 +1,21 @@
+<form [formGroup]="employeeForm">
+    <mat-form-field>
+        <label class="col-sm-2 control-label" for="firstName">First Name</label>
+        <input required matInput formControlName="firstName" type="text" id="firstName" class="form-control">
+    </mat-form-field>
+    <mat-form-field>
+        <label class="col-sm-2 control-label" for="lastName">Last Name</label>
+        <input required matInput formControlName="lastName" type="text" id="lastName" class="form-control">
+    </mat-form-field>
+    <mat-form-field>
+        <label class="col-sm-2 control-label" for="salary">Salary</label>
+        <input required matInput formControlName="salary" type="number" id="salary" class="form-control">
+    </mat-form-field>
+    <input type="submit" (click)="saveEmployee()">
+</form>
+<ng-container *ngIf="emp">
+    Employee Saved! 
+    Id: {{emp.id}}
+    First Name:  {{emp.firstName}}
+    Last Name:  {{emp.lastName}}
+</ng-container>
