@@ -1,21 +1,54 @@
-<form [formGroup]="employeeForm">
-    <mat-form-field>
-        <label class="col-sm-2 control-label" for="firstName">First Name</label>
-        <input required matInput formControlName="firstName" type="text" id="firstName" class="form-control">
-    </mat-form-field>
-    <mat-form-field>
-        <label class="col-sm-2 control-label" for="lastName">Last Name</label>
-        <input required matInput formControlName="lastName" type="text" id="lastName" class="form-control">
-    </mat-form-field>
-    <mat-form-field>
-        <label class="col-sm-2 control-label" for="salary">Salary</label>
-        <input required matInput formControlName="salary" type="number" id="salary" class="form-control">
-    </mat-form-field>
-    <input type="submit" (click)="saveEmployee()">
-</form>
-<ng-container *ngIf="emp">
-    Employee Saved! 
-    Id: {{emp.id}}
-    First Name:  {{emp.firstName}}
-    Last Name:  {{emp.lastName}}
-</ng-container>
+<mat-toolbar>Register New Employee</mat-toolbar>
+<mat-horizontal-stepper #stepper>
+    <mat-step [stepControl]="employeeForm">
+        <form [formGroup]="employeeForm" class="mat-elevation-z8">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <table cellpadding="20">
+                <tr>
+                    <td>
+                        <mat-form-field>
+                            <label class="col-sm-2 control-label" for="firstName">First Name</label>
+                            <input required matInput formControlName="firstName" type="text" id="firstName"
+                                class="form-control">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <label class="col-sm-2 control-label" for="lastName">Last Name</label>
+                            <input required matInput formControlName="lastName" type="text" id="lastName"
+                                class="form-control">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <label class="col-sm-2 control-label" for="salary">Salary</label>
+                            <input required matInput formControlName="salary" type="number" id="salary"
+                                class="form-control">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <div>
+                            <button mat-raised-button color="primary" matStepperNext>Next</button>
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-step>
+        <mat-step>
+                <ng-template matStepLabel>Finish</ng-template>
+                <div style="margin-bottom: 25px;">Are you sure you want to save?</div>
+                 <div>
+                  <button mat-raised-button color="primary" (click)="saveEmployee()">Save</button>
+                  <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+                  <button mat-raised-button color="accent" (click)="stepper.reset()">Reset</button>
+                </div>
+        </mat-step>
+        </mat-horizontal-stepper>
+        <div *ngIf="emp">
+            Employee Saved!
+            Id: {{emp.id}}
+            First Name: {{emp.firstName}}
+            Last Name: {{emp.lastName}}
+        </div>

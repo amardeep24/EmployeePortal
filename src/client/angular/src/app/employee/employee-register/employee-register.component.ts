@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { EmployeeService } from './../employee.service';
 import { Employee } from './../employee';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-employee-register',

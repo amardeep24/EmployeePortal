@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
 import { EmployeeViewComponent } from './employee-view/employee-view.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MatInputModule, MatTableModule, MatPaginatorModule, MatSortModule, MatProgressSpinnerModule, MatIconModule, MatFormFieldModule } from '@angular/material';
+import { MatInputModule, MatTableModule, MatPaginatorModule, MatSortModule, MatProgressSpinnerModule, MatIconModule, MatFormFieldModule, MatToolbarModule, MatButtonModule, MatStepperModule, MatDialogModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
@@ -21,7 +21,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     MatProgressSpinnerModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatStepperModule,
+    MatDialogModule
   ],
   exports: [EmployeeRegisterComponent, EmployeeViewComponent]
 })

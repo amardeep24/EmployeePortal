@@ -1,26 +1,24 @@
-<mat-table class="mat-elevation-z8" [dataSource]="dataSource">
+<mat-toolbar>Registered Employees</mat-toolbar>
+<mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort>
 
   <ng-container matColumnDef="id">
-    <div *matHeaderCellDef>ID&nbsp;&nbsp;</div>
-    <div *matCellDef="let emp">{{emp.id}}</div>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>ID&nbsp;&nbsp;</mat-header-cell>
+    <mat-cell *matCellDef="let emp">{{emp.id}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="firstName">
-    <div *matHeaderCellDef>First Name&nbsp;&nbsp;</div>
-    <div class="description-cell"
-         *matCellDef="let emp">{{emp.firstName}}</div>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>First Name&nbsp;&nbsp;</mat-header-cell>
+    <mat-cell *matCellDef="let emp">{{emp.firstName}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="lastName">
-    <div *matHeaderCellDef>Last Name&nbsp;&nbsp;</div>
-    <div class="duration-cell"
-         *matCellDef="let emp">{{emp.lastName}}</div>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Last Name&nbsp;&nbsp;</mat-header-cell>
+    <mat-cell *matCellDef="let emp">{{emp.lastName}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="salary">
-    <div *matHeaderCellDef>Salary&nbsp;&nbsp;</div>
-    <div class="duration-cell"
-         *matCellDef="let emp">{{emp.salary}}</div>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Salary&nbsp;&nbsp;</mat-header-cell>
+    <mat-cell *matCellDef="let emp">{{emp.salary}}</mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
@@ -32,5 +30,5 @@
 <mat-paginator #paginator
 [length]="resultsLength"
 [pageSize]="10"
-[pageSizeOptions]="[5, 10, 20]">
+[pageSizeOptions]="[5, 10, 20]" class="mat-elevation-z8">
 </mat-paginator>

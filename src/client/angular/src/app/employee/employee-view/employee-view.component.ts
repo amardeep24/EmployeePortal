@@ -27,11 +27,13 @@ export class EmployeeViewComponent implements OnInit {
       console.log(this.employees);
       this.dataSource.data = this.employees;
       this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
     this.empService.updateRequest$.subscribe(emp =>{
       if(emp){
         this.employees = this.employees.concat(emp);
         this.dataSource.data = this.employees;
+        this.dataSource.sort = this.sort;
         this.resultsLength = this.employees.length
       }
     })
