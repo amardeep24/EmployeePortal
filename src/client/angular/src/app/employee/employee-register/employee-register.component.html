@@ -40,9 +40,13 @@
                 <ng-template matStepLabel>Finish</ng-template>
                 <div style="margin-bottom: 25px;">Are you sure you want to save?</div>
                  <div>
-                  <button mat-raised-button color="primary" (click)="saveEmployee()">Save</button>
-                  <button mat-raised-button color="warn" matStepperPrevious>Back</button>
-                  <button mat-raised-button color="accent" (click)="stepper.reset()">Reset</button>
+                     <table>
+                  <tr>
+                      <td><button mat-raised-button color="primary" (click)="saveEmployee()">Save</button></td>
+                      <td><button mat-raised-button color="warn" matStepperPrevious>Back</button></td>
+                      <td><button mat-raised-button color="accent" (click)="stepper.reset()">Reset</button></td>
+                </tr>
+                </table>
                 </div>
         </mat-step>
         </mat-horizontal-stepper>
