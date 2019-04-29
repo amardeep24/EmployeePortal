@@ -16,6 +16,7 @@ To check out the project open git bash and type:
 ## Running the Spring-Boot REST API
 
 To run the Spring-Boot REST-API, go into the root directory and open a terminal and there type:
+
 `gradle bootRun`
 
 ## Running the Angular UI:
