@@ -21,7 +21,8 @@ To run the Spring-Boot REST-API, go into the root directory and open a terminal 
 ## Running the Angular UI:
 
 To run the Angular app, go into the `src/client/angular` directory and open a terminal and there type:
-`ng serve`
+ - `npm install`
+ - `ng serve`
 Then open Google Chrome, navigate to http://localhost:4200
 
  - In the UI, the top section will show a paginated view of all the employees registered.
