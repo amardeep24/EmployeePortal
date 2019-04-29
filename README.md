@@ -24,6 +24,7 @@ To run the Angular app, go into the `src/client/angular` directory and open a te
 `ng serve`
 Then open Google Chrome, navigate to http://localhost:4200
 
+![Application UI](https://user-images.githubusercontent.com/17095403/56878518-21f48600-6a72-11e9-9b82-30deb27588d2.png)
 
 
 
