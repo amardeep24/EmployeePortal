@@ -7,8 +7,8 @@ import java.util.Objects;
 @Entity
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "blog_id_generator")
-    @SequenceGenerator(name="blog_id_generator", sequenceName = "BLOG_ID_SEQ")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_id_generator")
+    @SequenceGenerator(name="employee_id_generator", sequenceName = "EMPLOYEE_ID_SEQ")
     private Long id;
     private String firstName;
     private String lastName;
